@@ -42,19 +42,14 @@ function getImages() {
 
             // au deuxieme clic
             if (clic === 2) { 
-                if (result[0].src === result[1].src) {
-                    alert("Nickel ça !");
-                    result=[];
-                    console.log(result);
-                }
-                else if (result[0].src != result[1].src) {
-                    result[1].src = this.src;
-                    console.log(result[1]);
-                    setTimeout(1000);
-                    result[1].src = "img/satan.webp"
-                    console.log(result[1]);
-                }
-                
+                    if (result[0].src === result[1].src) {
+                        alert("Nickel ça !");
+                        result=[];
+                        console.log(result);
+                    }
+                    else {
+                        setTimeout(noPair, 1000);
+                    }
                 clic = 0;
             }
         }); 
@@ -62,5 +57,13 @@ function getImages() {
 }
 getImages();
 
+
+// fonction qui remet les images a satan.webp si non paire
+function noPair () {
+    result[0].src = "img/satan.webp";
+    result[1].src = "img/satan.webp";
+result=[];
+console.log(result);
+}
 
 
