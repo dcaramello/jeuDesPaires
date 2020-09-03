@@ -93,26 +93,45 @@ textarea {
     src:url("Saiyan-Sans.ttf");      
 }
 
+.saiyan {
+  font-family: "saiyan", Arial, serif;
+}
+
 #start {
   margin: 20px ;
 }
 
 .card {
-  height: 80px;
-  width: 90px;
+  /* height: 80px;
+  width: 90px; */
+  width: 100%;
 }
 
+
+
 #blocCards {
-margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 #headBloc {
-  margin: auto;
+
   display: flex;
   justify-content: center;
   background-image: url("../img/kamehouse.jpg");
+  background-position: center;
   background-size: cover;
 }
+
+main {
+  background-image: url("../img/dokkan_battle.jpg");
+  background-position: center;
+  background-size: cover;  
+}
+
+/* button {
+  border: 1px solid black;
+} */
 
 .yellow {
   font-family: "saiyan", Arial, serif;
@@ -140,9 +159,56 @@ margin-bottom: 1em;
   color: yellow;
 }
 
+.ball {
+  width: 3em;
+}
 
+.foot {
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Media queries */
 
+@media screen and (min-width: 768px) {
+  /* .card {
+    height: 160px;
+    width: 180px; */
+  }
+  .yellow {
+    font-size: 3em;
+  }
+  .orange {
+    font-size: 4em;
+  }
+  .red {
+    font-size: 3em;
+  }
+  .headP {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* .card {
+    height: 300px;
+    width: 320px;
+  } */
+  .yellow {
+    font-size: 5em;
+  }
+  .orange {
+    font-size: 6em;
+  }
+  .red {
+    font-size: 5em;
+  }
+  .headP {
+    font-size: 4em;
+  }
+}
 
 
 

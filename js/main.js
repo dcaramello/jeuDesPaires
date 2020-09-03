@@ -47,7 +47,6 @@ function game() {
                 if (result[0].src === result[1].src) {
                     score ++;
                     console.log("score = " + score);
-                    alert("Nickel ça !");
                     result=[];
                     
                     if (score === 2) {
