@@ -87,6 +87,77 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* add new fonts */
+@font-face {
+  font-family: "saiyan";
+    src:url("Saiyan-Sans.ttf");      
+}
+
+#start {
+  margin: 20px ;
+}
+
+.card {
+  height: 80px;
+  width: 90px;
+}
+
+#blocCards {
+margin-bottom: 1em;
+}
+
+#headBloc {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/kamehouse.jpg");
+  background-size: cover;
+}
+
+.yellow {
+  font-family: "saiyan", Arial, serif;
+  font-size: 2em;
+  color: yellow;
+
+}
+
+.orange {
+  font-family: "saiyan", Arial, serif;
+  font-size: 3em;
+  color: orange;
+}
+
+.red {
+  font-family: "saiyan", Arial, serif;
+  font-size: 2em;
+  color: red;
+}
+
+
+.headP {
+  font-family: "saiyan", Arial, serif;
+  font-size: 2.5em;
+  color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
