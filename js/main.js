@@ -13,7 +13,7 @@ let score = 0;
 
 blocCards.style.display = "none";
 
-for (let i = 0 ; i < card.length; i ++) {
+for (let i=0 ; i<card.length; i++) {
     arrayCards.push(card[i]);
 }
 
@@ -43,8 +43,8 @@ function random(array) {
     let i;
     let j;
     let tmp;
-    for (i = array.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
+    for (i = array.length - 1; i>0; i--) {
+        j = Math.floor(Math.random() * (i+1));
         tmp = array[i];
         array[i] = array[j];
         array[j] = tmp;
@@ -96,19 +96,22 @@ function game() {
     // for loop which goes through all the elements and on click replaces the image
     for(let i = 0; i < arrayCards.length; i ++) {   
         arrayCards[i].addEventListener('click', function() {
-            if (arrayCards[i]) {      
+            if (arrayCards[i]) {    
                 arrayCards[i].src = arrayPictures[i];
                 result.push(arrayCards[i]); // la nouvelle valeur de l'index arrayCard est stoché dans result
                 console.log(result);
                 clic ++; 
                 console.log(clic);  
             }
-
             // on the second click
             if (clic === 2) { 
-                if (result[0].src === result[1].src) {
-                    score ++;
-                    console.log("score = " + score);
+                if (result[0] === "img/satanFull.webp") {
+                    if (result[0].src === result[1].src) {
+                        result[0].className = "clic";
+                        result[1].className = "clic";
+                        score ++;
+                        console.log("score = " + score);
+                    }
                     result=[];
                     // if score is 6 it's won the page reloads
                     if (score === 6) {
@@ -118,7 +121,7 @@ function game() {
                     }  
                 }
                 else {
-                    setTimeout(noPair, 300);
+                    setTimeout(noPair, 500);
                 } 
                 clic = 0;     
             }

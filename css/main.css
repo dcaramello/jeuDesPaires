@@ -173,13 +173,22 @@ textarea {
   background-color: grey;
 }
 
+/* *****Transitions***** */
+.clic {
+  width:10%; transition:2s 0.5s;
+}
+
+.clic:hover {
+  width:80%;transition:0.5s;
+}
+
 /* Media queries for header's font */
 /* tablet */
 @media screen and (min-width: 768px) {
   
   .yellow {
     font-size: 3em;
-  }
+  } 
   .orange {
     font-size: 4em;
   }
@@ -213,19 +222,6 @@ textarea {
     font-size: 4em;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
