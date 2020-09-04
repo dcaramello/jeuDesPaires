@@ -1,19 +1,23 @@
-// card contient les classe card en html
+// card contains the card class in html
 let card = document.getElementsByClassName("card");
 
-// on recupere les elements blocCards de html et on les stock dans un array
+// we retrieve the blocCards elements from html and store them in an array
 let arrayCards = [];
 let blocCards = document.getElementById("blocCards");
 let blocStart = document.getElementById("blocStart");
+let time = 30;
+let interval = null;
+let result = [];
+let clic = 0;
+let score = 0;
+
+blocCards.style.display = "none";
 
 for (let i = 0 ; i < card.length; i ++) {
     arrayCards.push(card[i]);
 }
 
-
-
-
-// un array d'images
+// we retrieve the blocCards elements from html and store them in an array
 let arrayPictures = [
     "img/boohanFull.webp",
     "img/brolyFull.webp",
@@ -29,10 +33,16 @@ let arrayPictures = [
     "img/roséFull.webp"
 ];
 
+// button that reloads the game
+document.getElementById("reload").addEventListener("click", function() {
+    reload();
+});
 
-// Fonction qui melange un array (l’algorithme de Fisher)
+// Function that mixes an array (Fisher's algorithm)
 function random(array) {
-    var i, j, tmp;
+    let i;
+    let j;
+    let tmp;
     for (i = array.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         tmp = array[i];
@@ -42,22 +52,33 @@ function random(array) {
     return array;
 }
 arrayPictures = random(arrayPictures);
-console.log(arrayPictures);
 
+// function for the account in rebourg
+function timer() {
+    time--;
+    if(time !== 0){	
+        document.getElementById("timer").innerHTML = time + " secondes restantes";
+    }	
+}
 
-// fonction qui remet les images a satan.webp si non paire
+// function that counts down at intervals of 1 second
+function start(){
+    interval = setInterval(timer, 1000);
+}	
+
+// function which returns the images to satan.webp if not even
 function noPair () {
     result[0].src = "img/satanFull.webp";
     result[1].src = "img/satanFull.webp";
     result=[];
 }
 
-// function qui recharge la page si besoin
+// function which reloads the page if necessary
 function reload() {
     window.location.reload();
 }
 
-// fonction qui lance le jeu en appuiyan sur start
+// function which launches the game by pressing on start
 function play() {
     let start = document.getElementById("start");
     start.addEventListener('click', function (){
@@ -66,20 +87,13 @@ function play() {
     });
 }
 
-// initialisation des variables vides, result stock les 2 elements a comparer quand clic est egal a 2. le jeu est terminé quand score est a 6.
-let result = [];
-let clic = 0;
-let score = 0;
-
-blocCards.style.display = "none";
-
-
-// function qui exectute tout le jeu en comparant les cartes
+// function that executes the whole game by comparing the cards
 function game() {
+    start();
     blocStart.style.display = "none";
     blocCards.style.display = "block";
 
-    // boucle for qui parcourt tous les elements et au clic remplace l'image
+    // for loop which goes through all the elements and on click replaces the image
     for(let i = 0; i < arrayCards.length; i ++) {   
         arrayCards[i].addEventListener('click', function() {
             if (arrayCards[i]) {      
@@ -90,13 +104,13 @@ function game() {
                 console.log(clic);  
             }
 
-            // au deuxieme clic
+            // on the second click
             if (clic === 2) { 
                 if (result[0].src === result[1].src) {
                     score ++;
                     console.log("score = " + score);
                     result=[];
-                    
+                    // if score is 6 it's won the page reloads
                     if (score === 6) {
                         alert("win");
                         window.location.reload();
@@ -115,7 +129,4 @@ function game() {
 
 
 play();
-
-
-
 

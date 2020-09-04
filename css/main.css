@@ -93,8 +93,63 @@ textarea {
     src:url("Saiyan-Sans.ttf");      
 }
 
+/* class general */
 .saiyan {
   font-family: "saiyan", Arial, serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+/* **********HEADER********** */
+#headBloc {
+  background-image: url("../img/kamehouse.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.yellow {
+  font-size: 2em;
+  color: yellow;
+}
+
+.orange {
+  font-size: 3em;
+  color: orange;
+}
+
+.red {
+  font-size: 2em;
+  color: red;
+}
+
+.headP {
+  font-size: 2.5em;
+  color: yellow;
+}
+
+/* **********MAIN********** */
+/* Bloc start */
+#blocStart {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../img/fight.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+/* bloc with a game */
+#timer {
+  background-color: teal;
+  color: white;
+  font-size: 1.5em;
 }
 
 .card {
@@ -107,76 +162,19 @@ textarea {
   background-color: teal;
 }
 
-#headBloc {
-  display: flex;
-  justify-content: center;
-  background-image: url("../img/kamehouse.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-#start {
-  display: flex;
-  justify-content:  center;
-}
-
-
-
-#blocStart {
-  width: 100%;
-  height: 50vh;
-  background-image: url("../img/fight.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.5em;
-  color: white;
-
-}
-
-
-.yellow {
-  font-family: "saiyan", Arial, serif;
-  font-size: 2em;
-  color: yellow;
-
-}
-
-.orange {
-  font-family: "saiyan", Arial, serif;
-  font-size: 3em;
-  color: orange;
-}
-
-.red {
-  font-family: "saiyan", Arial, serif;
-  font-size: 2em;
-  color: red;
-}
-
-
-.headP {
-  font-family: "saiyan", Arial, serif;
-  font-size: 2.5em;
-  color: yellow;
-}
-
+/* **********FOOTER********** */
 .ball {
   width: 3em;
 }
 
 .foot {
   padding: 0.5em;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: grey;
 }
 
-/* Media queries */
-
+/* Media queries for header's font */
+/* tablet */
 @media screen and (min-width: 768px) {
   
   .yellow {
@@ -196,6 +194,7 @@ textarea {
   }
 }
 
+/* desktop */
 @media screen and (min-width: 1200px) {
   
   .yellow {
