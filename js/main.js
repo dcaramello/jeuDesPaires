@@ -97,7 +97,7 @@ function game() {
                     console.log("score = " + score);
                     result=[];
                     
-                    if (score === 2) {
+                    if (score === 6) {
                         alert("win");
                         window.location.reload();
                         play();
@@ -105,14 +105,17 @@ function game() {
                 }
                 else {
                     setTimeout(noPair, 300);
-                }
-                    
-                
+                } 
                 clic = 0;     
             }
         }); 
     }    
+    setTimeout(reload, 30000);
 }
 
+
 play();
+
+
+
 
