@@ -25,7 +25,7 @@
 
 <body>
 <header>
-  <div  id="headBloc" class="jumbotron jumbotron-fluid">
+  <div  id="headBloc" class="jumbotron jumbotron-fluid mb-0">
     <div class="container">
       <h1 class="display-5"><span class="yellow">Mem</span><span class="orange border-info">o</span><span class="red">ry</span></h1>
       <p class="headP">Trouves les paires !</p>
@@ -33,37 +33,38 @@
   </div>
 </header>
 
-<main class="container">
-  <div class="container" id="blocCards">
-  <div class="row">
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
+<main>
+  <div class="container-fluid" id="blocCards">
+      <div class="row">
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0 border-3 border-dark rounded"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+      <div class="col-4 col-md-3 col-lg-2"><button class="p-0"><img src= 'img/satanFull.webp' class="card"></button></div>
+    </div>
+    <!-- <button id="start" type="button" class="btn btn-warning btn-md saiyan">RELOAD</button>   -->
   </div>
-  <div class="row">
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
+  <div id="blocStart"> 
+    <div>
+      <p class="saiyan">cliques sur START et trouves les paires</p>
+    </div>
+    <button id="start" type="button" class="btn btn-warning btn-md saiyan">START</button>  
   </div>
-  <div class="row">
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-  </div>
-  <div class="row">
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-    <button class="p-0"><img src= 'img/satan.jpg' class="card"></button>
-  </div>
-  </div>
-
-  <button id="start">Start</button>  
 </main>
 
 <footer class="m-0">
-  <div class="jumbotron jumbotron-fluid m-0">
-    <div class="container">
-      <h3>Tous droits réservés</h3>
+  <div class="jumbotron jumbotron-fluid m-0 p-0">
+    <div class="container-fluid foot">
+      <img class="ball" src="img/ball.png" alt="ball">
+      <p class="saiyan">Tous droits reserves</p>
+      <img class="ball" src="img/ball.png" alt="ball">
     </div>
   </div>
 </footer>
