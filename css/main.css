@@ -97,25 +97,17 @@ textarea {
   font-family: "saiyan", Arial, serif;
 }
 
-#start {
-  margin: 20px ;
-}
-
 .card {
-  /* height: 80px;
-  width: 90px; */
   width: 100%;
 }
-
-
 
 #blocCards {
   padding-top: 1em;
   padding-bottom: 1em;
+  background-color: teal;
 }
 
 #headBloc {
-
   display: flex;
   justify-content: center;
   background-image: url("../img/kamehouse.jpg");
@@ -123,15 +115,27 @@ textarea {
   background-size: cover;
 }
 
-main {
-  background-image: url("../img/dokkan_battle.jpg");
-  background-position: center;
-  background-size: cover;  
+#start {
+  display: flex;
+  justify-content:  center;
 }
 
-/* button {
-  border: 1px solid black;
-} */
+
+
+#blocStart {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../img/fight.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+
+}
+
 
 .yellow {
   font-family: "saiyan", Arial, serif;
@@ -168,15 +172,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: grey;
 }
 
 /* Media queries */
 
 @media screen and (min-width: 768px) {
-  /* .card {
-    height: 160px;
-    width: 180px; */
-  }
+  
   .yellow {
     font-size: 3em;
   }
@@ -189,13 +191,13 @@ main {
   .headP {
     font-size: 2.5em;
   }
+  #blocStart {
+    font-size: 2em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  /* .card {
-    height: 300px;
-    width: 320px;
-  } */
+  
   .yellow {
     font-size: 5em;
   }
@@ -206,6 +208,9 @@ main {
     font-size: 5em;
   }
   .headP {
+    font-size: 4em;
+  }
+  #blocStart {
     font-size: 4em;
   }
 }
