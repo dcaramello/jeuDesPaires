@@ -99,19 +99,14 @@ function game() {
             if (arrayCards[i]) {    
                 arrayCards[i].src = arrayPictures[i];
                 result.push(arrayCards[i]); // la nouvelle valeur de l'index arrayCard est stoché dans result
-                console.log(result);
                 clic ++; 
                 console.log(clic);  
             }
             // on the second click
             if (clic === 2) { 
-                if (result[0] === "img/satanFull.webp") {
-                    if (result[0].src === result[1].src) {
-                        result[0].className = "clic";
-                        result[1].className = "clic";
-                        score ++;
-                        console.log("score = " + score);
-                    }
+                if (result[0].src === result[1].src) {
+                    score ++;
+                    console.log("score = " + score);
                     result=[];
                     // if score is 6 it's won the page reloads
                     if (score === 6) {
@@ -129,7 +124,6 @@ function game() {
     }    
     setTimeout(reload, 30000);
 }
-
 
 play();
 
