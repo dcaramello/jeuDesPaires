@@ -116,7 +116,7 @@ function game() {
                     }  
                 }
                 else {
-                    setTimeout(noPair, 500);
+                    setTimeout(noPair, 1000);
                 } 
                 clic = 0;     
             }
