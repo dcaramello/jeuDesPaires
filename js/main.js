@@ -1,8 +1,8 @@
 // card contains the card class in html
-let card = document.getElementsByClassName("card");
+let cards = document.getElementsByClassName("card");
+let bloc = document.getElementById("bloc");
 
 // we retrieve the blocCards elements from html and store them in an array
-let arrayCards = [];
 let blocCards = document.getElementById("blocCards");
 let blocStart = document.getElementById("blocStart");
 let time = 30;
@@ -10,12 +10,11 @@ let interval = null;
 let result = [];
 let clic = 0;
 let score = 0;
+let regSatan = /satanFull/;
 
 blocCards.style.display = "none";
 
-for (let i=0 ; i<card.length; i++) {
-    arrayCards.push(card[i]);
-}
+
 
 // we retrieve the blocCards elements from html and store them in an array
 let arrayPictures = [
@@ -32,6 +31,18 @@ let arrayPictures = [
     "img/piccoloFull.webp",
     "img/roséFull.webp"
 ];
+
+// creation of the block which contains the hidden cards
+for (i=0; i<arrayPictures.length; i++) {
+    let div = document.createElement("div");
+    bloc.append(div);
+    div.className = "col-4 col-md-3 col-lg-2 rounded p-2";
+    let img = document.createElement("img");
+    img.src = "img/satanFull.webp"
+    img.className = "card";
+    div.append(img);    
+}
+
 
 // button that reloads the game
 document.getElementById("reload").addEventListener("click", function() {
@@ -94,13 +105,12 @@ function game() {
     blocCards.style.display = "block";
 
     // for loop which goes through all the elements and on click replaces the image
-    for(let i = 0; i < arrayCards.length; i ++) {   
-        arrayCards[i].addEventListener('click', function() {
-            if (arrayCards[i]) {    
-                arrayCards[i].src = arrayPictures[i];
-                result.push(arrayCards[i]); // la nouvelle valeur de l'index arrayCard est stoché dans result
+    for(let i = 0; i < cards.length; i ++) {
+        cards[i].addEventListener('click', function() {
+            if (cards[i].src.match(regSatan)) {   
+                cards[i].src = arrayPictures[i];
+                result.push(cards[i]); // the new value of the arrayCard index is stored in result
                 clic ++; 
-                console.log(clic);  
             }
             // on the second click
             if (clic === 2) { 
@@ -109,18 +119,18 @@ function game() {
                     console.log("score = " + score);
                     result=[];
                     // if score is 6 it's won the page reloads
+                }
                     if (score === 6) {
                         alert("win");
                         window.location.reload();
                         play();
                     }  
-                }
-                else {
+                else {  
                     setTimeout(noPair, 1000);
                 } 
                 clic = 0;     
             }
-        }); 
+        });
     }    
     setTimeout(reload, 30000);
 }
