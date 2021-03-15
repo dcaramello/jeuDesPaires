@@ -132,7 +132,7 @@ function game() {
             }
         });
     }    
-    setTimeout(reload, 30000);
+    setTimeout(reload, 60000);
 }
 
 play();
